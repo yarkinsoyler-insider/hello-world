@@ -1,14 +1,16 @@
-import { createStore } from 'vuex'
-import { state } from './state';
-import { actions } from './actions'
-import { mutations } from './mutations'
-import { getters } from './getters'
+import Vue from 'vue'
+import Vuex from 'vuex'
 
-const store = createStore({
-    state,
-    actions,
-    mutations,
-    getters
+Vue.use(Vuex)
+
+import actions from './actions'
+import getters from './getters'
+import mutations from './mutations'
+import state from './state'
+
+export default new Vuex.Store({
+  state,
+  mutations,
+  actions,
+  getters
 })
-
-export default store;

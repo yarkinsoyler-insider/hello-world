@@ -1,8 +1,17 @@
-export const mutations = {
-    setHoveredElement(state, element) {
-        state.hoveredElement = element;
+export default {
+    updateMovieList(state, movieList) {
+        state.movies = movieList;
     },
-    setMovies(state, movies) {
-        state.movies = movies;
+    updateMovie(state, movie){
+        state.movie = movie
     },
-};
+    clearMovie(state){
+        state.movie = null;
+    },
+    updateLoadingStatus(state,payload){
+        state.loading = payload;
+    },
+    clearMovieList(state){
+        state.movieList = null;
+    }
+}
